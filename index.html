@@ -14,7 +14,12 @@
     <div class="wrapper">
         <header class="header"></header>
         <main class="main">
-            <div id="clickDate" onclick="formatDate()">Кликни сюда</div>
+            <div>Поехали! Кликните на картинку</div>
+            <img id="cat-bus" src="assets/img/totoro-cat-bus.jpg" alt="totoro" onclick="startMoving()">
+            <div id="clickDate" onclick="formatDate()">Время в пути</div>
+            <div class="travel-info" id="travel-duration"></div>
+            <div id="arrDest" onclick="stopMoving()">Стой!</div>
+            <div class="travel-info" id="travel-info"></div>
         </main>
         <div class="footer"></div>
     </div>
