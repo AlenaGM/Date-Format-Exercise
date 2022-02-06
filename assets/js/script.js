@@ -28,11 +28,11 @@ function formatDate(){
         console.log('Вы выехали: прямо сейчас');//если прошло меньше 1 сек.
         document.getElementById('travel-duration').innerHTML = 'Вы выехали: прямо сейчас';
 
-    } else if (timePassed/1000 < 59.999){//переводим время, прошедшее с момента обновления страницы в секунды и сравниваем с 1 мин.
+    } else if (timePassed/1000 < 60){//переводим время, прошедшее с момента обновления страницы в секунды и сравниваем с 1 мин.
         console.log(`Вы выехали: ${Math.round(timePassed/1000)} сек. назад`);//если прошло меньше 1 мин.
         document.getElementById('travel-duration').innerHTML = `Вы выехали: ${Math.round(timePassed/1000)} сек. назад`;
 
-    } else if (timePassed/1000 < 3599.999){//переводим время, прошедшее с момента обновления страницы в секунды и сравниваем с 1 часом
+    } else if (timePassed/1000 < 3600){//переводим время, прошедшее с момента обновления страницы в секунды и сравниваем с 1 часом
         console.log(`Вы выехали: ${Math.round(timePassed/60000)} мин. назад`);//если прошло меньше 1 часа.
         document.getElementById('travel-duration').innerHTML = `Вы выехали: ${Math.round(timePassed/60000)} мин. назад`;
 
