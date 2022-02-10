@@ -43,7 +43,6 @@ document.querySelector("#arrDest").addEventListener("click", function stopMoving
     busImg.src ="assets/img/totoro-cat-bus.jpg";
 
     document.getElementById('travel-duration').innerHTML = '';
-
     document.getElementById('travel-info').innerHTML =
     `Путешествие началось ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(date)}
     в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(date)}; <br>
