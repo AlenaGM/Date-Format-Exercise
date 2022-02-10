@@ -65,14 +65,14 @@ body {
     letter-spacing: 0.05em;
     border-radius: 8px;
     padding: 10px 20px;
-    min-width: 150px;
+    /*min-width: 150px;*/
     cursor: pointer;
     transition: background-color 0.5s ease 0s;
     box-shadow: 0 2px 0 #23262f3b;
 }
 
-.button:last-child {
-    margin-left: 20px;
+.button:not(:last-child) {
+    margin-right: 16px;
 }
 
 .button_color-lilac {
