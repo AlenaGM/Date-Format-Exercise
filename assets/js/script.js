@@ -60,22 +60,31 @@ document.querySelector("#arrDest").addEventListener("click", function(){
 });
 
 document.querySelector("#resetTimer").addEventListener('click', function(){
-    location.reload()
+    location.reload();
 });
 
 function stopMoving() {
 
-    let busImg = document.getElementById('cat-bus');
-    busImg.src ="assets/img/totoro-cat-bus.jpg";
+    if (document.getElementById('cat-bus').classList.contains("active")){//Докладываем о результатах, если кот побегал и прибежал
 
-    document.getElementById('travel-duration').innerHTML = '';
-    document.getElementById('travel-info').innerHTML =
-    `Путешествие началось ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(date)}
-    в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(date)}; <br>
-    Путешествие закончилось ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(new Date)}
-    в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(new Date)};`
+        let busImg = document.getElementById('cat-bus');
+        busImg.src ="assets/img/totoro-cat-bus.jpg";
 
-    document.getElementById('cat-bus').classList.remove("active");
+        document.getElementById('travel-duration').innerHTML = '';
+        document.getElementById('travel-info').innerHTML =
+        `Путешествие началось ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(date)}
+        в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(date)}; <br>
+        Путешествие закончилось ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(new Date)}
+        в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(new Date)};`
 
-    clearTimeout(timer);//Останавливаем таймер
+        document.getElementById('cat-bus').classList.remove("active");
+
+        clearTimeout(timer);//Останавливаем таймер
+
+
+    } else {//случай, когда кот не бегал = результатов нет
+        document.getElementById('travel-duration').innerHTML = ``;
+        document.getElementById('travel-info').innerHTML = `Вы никуда не приехали,<br> потому что ниоткуда не выезжали`;
+    }
+
 };
