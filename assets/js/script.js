@@ -2,12 +2,22 @@ let date;
 let timer;
 
 document.querySelector("#cat-bus").addEventListener("click", function startMoving() {
-    date = new Date(); //время клика на картинку = начала движения
+    date = new Date(); //время клика на картинку = начало движения
     let busImg = document.getElementById('cat-bus');
     busImg.src ="assets/img/totoro-cat-bus-moving.jpg";
 
     document.getElementById('travel-duration').innerHTML = '';
     document.getElementById('travel-info').innerHTML = '';
+
+    if(document.getElementById('cat-bus').classList.contains("active")) {//если кот уже бежит => это повторный клик -> останавливаем
+        document.getElementById('cat-bus').classList.remove("active");
+
+        stopMoving();
+
+    } else {
+        document.getElementById('cat-bus').classList.add("active");
+        //на будущее, чтобы знать: есть класс "active" -> кот бежит, нет -> стоит
+    }
 });
 
 document.querySelector("#clickDate").addEventListener("click", function formatDate(){
@@ -36,10 +46,17 @@ document.querySelector("#clickDate").addEventListener("click", function formatDa
 timer = setTimeout(formatDate,1000);//Чтобы таймер крутился без остановки
 });
 
-document.querySelector("#arrDest").addEventListener("click", function stopMoving() {
+document.querySelector("#arrDest").addEventListener("click", function(){
+    stopMoving();
+});
+
+document.querySelector("#resetTimer").addEventListener('click', function(){
+    location.reload()
+});
+
+function stopMoving() {
 
     let busImg = document.getElementById('cat-bus');
-
     busImg.src ="assets/img/totoro-cat-bus.jpg";
 
     document.getElementById('travel-duration').innerHTML = '';
@@ -49,10 +66,7 @@ document.querySelector("#arrDest").addEventListener("click", function stopMoving
     Путешествие закончилось ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(new Date)}
     в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(new Date)};`
 
+    document.getElementById('cat-bus').classList.remove("active");
 
     clearTimeout(timer);//Останавливаем таймер
-});
-
-document.querySelector("#resetTimer").addEventListener('click', function(){
-    location.reload()
-});
+};
