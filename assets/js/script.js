@@ -2,6 +2,7 @@ let date;
 let timer;
 
 document.querySelector("#cat-bus").addEventListener("click", function startMoving() {
+
     date = new Date(); //время клика на картинку = начало движения
     let busImg = document.getElementById('cat-bus');
     busImg.src ="assets/img/totoro-cat-bus-moving.jpg";
@@ -21,29 +22,37 @@ document.querySelector("#cat-bus").addEventListener("click", function startMovin
 });
 
 document.querySelector("#clickDate").addEventListener("click", function formatDate(){
-    let timePassed = (new Date() - date);//время, которое прошло с момента начала движения в мс
 
-    document.getElementById('travel-info').innerHTML = '';
+    if (document.getElementById('cat-bus').classList.contains("active")){//исключаем возможность запустить таймер, если кот не бежит
 
-    if (timePassed/1000 < 1) {//переводим время, прошедшее с момента начала движения в секунды и сравниваем с 1 сек.
-        //если прошло меньше 1 сек.
-        document.getElementById('travel-duration').innerHTML = 'Вы выехали: прямо сейчас';
+        let timePassed = (new Date() - date);//время, которое прошло с момента начала движения в мс
 
-    } else if (timePassed/1000 < 59){//переводим время, прошедшее с момента начала движения в секунды и сравниваем с 1 мин.
-        //если прошло меньше 1 мин.
-        document.getElementById('travel-duration').innerHTML = `Вы выехали: ${Math.round(timePassed/1000)} сек. назад`;
+        document.getElementById('travel-info').innerHTML = '';
 
-    } else if (timePassed/1000 < 3599){//переводим время, прошедшее с момента начала движения в секунды и сравниваем с 1 часом
-        //если прошло меньше 1 часа.
-        document.getElementById('travel-duration').innerHTML = `Вы выехали: ${Math.round(timePassed/60000)} мин. назад`;
+        if (timePassed/1000 < 1) {//переводим время, прошедшее с момента начала движения в секунды и сравниваем с 1 сек.
+            //если прошло меньше 1 сек.
+            document.getElementById('travel-duration').innerHTML = 'Вы выехали: прямо сейчас';
 
-    } else {//если прошло больше часа, показываем дату начала движения в формате ДД.ММ.ГГ, ЧЧ:ММ
-        document.getElementById('travel-duration').innerHTML =
-        `Вы выехали: ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(date)}
-        в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(date)}`;
+        } else if (timePassed/1000 < 59){//переводим время, прошедшее с момента начала движения в секунды и сравниваем с 1 мин.
+            //если прошло меньше 1 мин.
+            document.getElementById('travel-duration').innerHTML = `Вы выехали: ${Math.round(timePassed/1000)} сек. назад`;
+
+        } else if (timePassed/1000 < 3599){//переводим время, прошедшее с момента начала движения в секунды и сравниваем с 1 часом
+            //если прошло меньше 1 часа.
+            document.getElementById('travel-duration').innerHTML = `Вы выехали: ${Math.round(timePassed/60000)} мин. назад`;
+
+        } else {//если прошло больше часа, показываем дату начала движения в формате ДД.ММ.ГГ, ЧЧ:ММ
+            document.getElementById('travel-duration').innerHTML =
+            `Вы выехали: ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(date)}
+            в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(date)}`;
+        }
+
+        timer = setTimeout(formatDate,1000);//Чтобы таймер крутился без остановки
+
+    } else {//случай, когда кот еще/уже не бежит: таймер не крутится, время в пути отсутствует
+        document.getElementById('travel-duration').innerHTML = `Не знаю: сейчас вы не путешествуете.<br> Может, поедем уже?`;
+        document.getElementById('travel-info').innerHTML = '';
     }
-
-timer = setTimeout(formatDate,1000);//Чтобы таймер крутился без остановки
 });
 
 document.querySelector("#arrDest").addEventListener("click", function(){
