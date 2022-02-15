@@ -5,15 +5,16 @@ document.querySelector("#cat-bus").addEventListener("click", function startMovin
 
     date = new Date(); //время клика на картинку = начало движения
     let busImg = document.getElementById('cat-bus');
-    busImg.src ="assets/img/totoro-cat-bus-moving.jpg";
+    busImg.src ="assets/img/totoro-cat-bus-moving.jpg";//Заменяем статичную картинку на двужущуюся
 
     document.getElementById('travel-duration').innerHTML = '';
     document.getElementById('travel-info').innerHTML = '';
 
     if(document.getElementById('cat-bus').classList.contains("active")) {//если кот уже бежит => это повторный клик -> останавливаем
+
+        stopMoving();//Останавливаем кота, убираем класс "active"
         document.getElementById('cat-bus').classList.remove("active");
 
-        stopMoving();
 
     } else {
         document.getElementById('cat-bus').classList.add("active");
@@ -55,7 +56,7 @@ document.querySelector("#clickDate").addEventListener("click", function formatDa
     }
 });
 
-document.querySelector("#arrDest").addEventListener("click", function(){
+document.querySelector("#arrDest").addEventListener("click", function(){//Остановка при клике на кнопку
     stopMoving();
 });
 
@@ -65,12 +66,12 @@ document.querySelector("#resetTimer").addEventListener('click', function(){
 
 function stopMoving() {
 
-    if (document.getElementById('cat-bus').classList.contains("active")){//Докладываем о результатах, если кот побегал и прибежал
+    if (document.getElementById('cat-bus').classList.contains("active")){//Докладываем о результатах, только если кот побегал и прибежал
 
         let busImg = document.getElementById('cat-bus');
-        busImg.src ="assets/img/totoro-cat-bus.jpg";
+        busImg.src ="assets/img/totoro-cat-bus.jpg";//Заменяем движущееся изображение на статичное
 
-        document.getElementById('travel-duration').innerHTML = '';
+        document.getElementById('travel-duration').innerHTML = '';//Выводим результаты
         document.getElementById('travel-info').innerHTML =
         `Путешествие началось ${new Intl.DateTimeFormat('ru-RU', {day:'2-digit', month:'2-digit', year:'2-digit'}).format(date)}
         в ${new Intl.DateTimeFormat('ru-RU', {hour:'2-digit', minute:'2-digit'}).format(date)}; <br>
