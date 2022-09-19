@@ -1,16 +1,16 @@
-# :cat: Form-Date-Exercise :cat:
+# 🐈‍ Form-Date-Exercise 🚌
 _Function that formats date and time._
 
-Form-Date-Exercise is a Java-Script 'date formatting' assignment made on week 17 of learning with [ITGirlSchool].
+Form-Date-Exercise is a Java-Script _'date formatting'_ assignment made on week 17 of learning with [ITGirlSchool].
 
 We've got a task to write a  `formatDate(date)` function, that transforms `date` in the following way:
 
-    - Upon less that 1 second from `date` show `right now`.
-    - Otherwise, upon less that 1 minute from `date`, show `n seconds ago`.
-    - Otherwise, upon less that 1 hour from `date`, show `n minutes ago`.
-    - Otherwise, show full date in format `DD.MM.YY HH:mm`.
+    - Upon less that 1 second from `date` show `right now`.     
+    - Upon less that 1 minute from `date`, show `n seconds ago`.
+    - Upon less that 1 hour from `date`, show `n minutes ago`.
+    - Otherwise, show full date in `DD.MM.YY HH:mm` format.
 
-That was quite a boring stuff to do, so I added a timer ⏲️ and cheered it up with some 🐈‍ + 🚌 animation. Enjoy!
+That was quite a boring stuff to do, so I added a ⏲️-timer and cheered it up with some 🐈‍ + 🚌 animation. Enjoy!
 
 
 ## Result
