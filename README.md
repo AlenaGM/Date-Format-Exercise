@@ -30,4 +30,4 @@ That was quite a boring stuff to do, so I added a ⏲️-timer and cheered it up
   
 
    [ITGirlSchool]: <https://itgirlschool.com/en>
-   [Date-Format-Exercise]: <https://alenagm.github.io/Form-Date-Exercise/>
+   [Date-Format-Exercise]: <https://alenagm.github.io/Date-Format-Exercise/>
