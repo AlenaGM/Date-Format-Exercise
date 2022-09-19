@@ -4,7 +4,7 @@ let timer;
 document
   .querySelector("#cat-bus")
   .addEventListener("click", function startMoving() {
-    date = new Date(); //time of click on the image => travel begins
+    date = new Date(); //time of image-click => travel begins
     let busImg = document.getElementById("cat-bus");
     busImg.src = "assets/img/totoro-cat-bus-moving.jpg"; //img changes from static to moving
 
@@ -36,42 +36,44 @@ document
         //time from travel-start until now is converted in seconds and compared to 1 sec
         //if it is less than 1 sec:
         document.getElementById("travel-duration").innerHTML =
-          "Вы выехали: прямо сейчас";
+          "You departed: right now";
       } else if (timePassed / 1000 < 59) {
         //time from travel-start until now is converted in seconds and compared to 1 minute
         //if it is less than 1 minute:
         document.getElementById(
           "travel-duration"
-        ).innerHTML = `Вы выехали: ${Math.round(timePassed / 1000)} сек. назад`;
+        ).innerHTML = `You departed: ${Math.round(
+          timePassed / 1000
+        )} seconds ago`;
       } else if (timePassed / 1000 < 3599) {
         //time from travel-start until now is converted in seconds and compared to 1 hour
         //if it is less than 1 hour:
         document.getElementById(
           "travel-duration"
-        ).innerHTML = `Вы выехали: ${Math.round(
+        ).innerHTML = `You have departed: ${Math.round(
           timePassed / 60000
-        )} мин. назад`;
+        )} min ago`;
       } else {
         //if it is more than 1 hour, we show full date in `DD.MM.YY HH:mm` format.
         document.getElementById(
           "travel-duration"
-        ).innerHTML = `Вы выехали: ${new Intl.DateTimeFormat("ru-RU", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "2-digit",
+        ).innerHTML = `You departed at ${new Intl.DateTimeFormat("fr-FR", {
+          hour: "2-digit",
+          minute: "2-digit",
         }).format(date)}
-            в ${new Intl.DateTimeFormat("ru-RU", {
-              hour: "2-digit",
-              minute: "2-digit",
+            on ${new Intl.DateTimeFormat("fr-FR", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "2-digit",
             }).format(date)}`;
       }
 
-      timer = setTimeout(formatDate, 1000); //we make timer turn nonstop
+      timer = setTimeout(formatDate, 1000); //we make timer run nonstop
     } else {
-      //case when cat is not running or stopped running => timer is not turning and there is no travel time to show
+      //case when the cat is not running or stopped running => timer is not running and there is no travel time to show
       document.getElementById(
         "travel-duration"
-      ).innerHTML = `Не знаю: сейчас вы не путешествуете.<br> Может, поедем уже?`;
+      ).innerHTML = `No idea: your are not travelling.<br> Let's get started!!`;
       document.getElementById("travel-info").innerHTML = "";
     }
   });
@@ -95,21 +97,21 @@ function stopMoving() {
     document.getElementById("travel-duration").innerHTML = ""; //Showing result
     document.getElementById(
       "travel-info"
-    ).innerHTML = `Путешествие началось ${new Intl.DateTimeFormat("ru-RU", {
+    ).innerHTML = `Your travel started ${new Intl.DateTimeFormat("fr-FR", {
       day: "2-digit",
       month: "2-digit",
       year: "2-digit",
     }).format(date)}
-        в ${new Intl.DateTimeFormat("ru-RU", {
+        at ${new Intl.DateTimeFormat("fr-FR", {
           hour: "2-digit",
           minute: "2-digit",
         }).format(date)}; <br>
-        Путешествие закончилось ${new Intl.DateTimeFormat("ru-RU", {
+        Your travel ended ${new Intl.DateTimeFormat("fr-FR", {
           day: "2-digit",
           month: "2-digit",
           year: "2-digit",
         }).format(new Date())}
-        в ${new Intl.DateTimeFormat("ru-RU", {
+        at ${new Intl.DateTimeFormat("fr-FR", {
           hour: "2-digit",
           minute: "2-digit",
         }).format(new Date())};`;
@@ -122,6 +124,6 @@ function stopMoving() {
     document.getElementById("travel-duration").innerHTML = ``;
     document.getElementById(
       "travel-info"
-    ).innerHTML = `Вы никуда не приехали,<br> потому что ниоткуда не выезжали`;
+    ).innerHTML = `You have not arrived anywhere,<br> because you haven't departured!`;
   }
 }
