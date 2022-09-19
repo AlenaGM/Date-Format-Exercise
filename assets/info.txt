@@ -1,6 +1,6 @@
 font-family: 'Forum', cursive;
 
-#EEF3F8 фон
-#425B5F заголовок
-#748bb4 кнопки
+#EEF3F8 background
+#425B5F title
+#748bb4 buttons
 #ccbac6
