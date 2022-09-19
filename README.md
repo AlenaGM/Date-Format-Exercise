@@ -14,7 +14,7 @@ That was quite a boring stuff to do, so I added a ⏲️-timer and cheered it up
 
 
 ## Result
-<img width="45%" alt="screen capture" src="../main/assets/img/captureweb.png">
+<img width="45%" alt="screen capture" src="../main/assets/img/captureweb.jpeg">
 
 ## Demo
 [Date-Format-Exercise]
