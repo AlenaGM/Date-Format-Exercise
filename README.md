@@ -1,4 +1,4 @@
-# 🐈‍ Form-Date-Exercise 🚌
+# 🐈‍ Date-Format-Exercise 🚌
 _Function that formats date and time._
 
 Form-Date-Exercise is a Java-Script _'date formatting'_ assignment made on week 17 of learning with [ITGirlSchool].
@@ -17,7 +17,7 @@ That was quite a boring stuff to do, so I added a ⏲️-timer and cheered it up
 <img width="45%" alt="screen capture" src="../main/assets/img/captureweb.png">
 
 ## Demo
-[Form-Date-Exercise]
+[Date-Format-Exercise]
 
 ## Tech stack
 
@@ -30,4 +30,4 @@ That was quite a boring stuff to do, so I added a ⏲️-timer and cheered it up
   
 
    [ITGirlSchool]: <https://itgirlschool.com/en>
-   [Form-Date-Exercise]: <https://alenagm.github.io/Form-Date-Exercise/>
+   [Date-Format-Exercise]: <https://alenagm.github.io/Date-Format-Exercise/>
