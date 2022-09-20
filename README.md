@@ -19,6 +19,10 @@ That was quite a boring stuff to do, so I added a ⏲️-timer and cheered it up
 ## Demo
 [Date-Format-Exercise]
 
+
+https://user-images.githubusercontent.com/91268509/191195513-5a077f55-97e1-4f45-a003-b4bc17db7ac4.mp4
+
+
 ## Tech stack
 
 <code><img height="25" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png"></code>
