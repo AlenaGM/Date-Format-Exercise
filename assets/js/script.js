@@ -11,11 +11,14 @@ document
     document.getElementById("travel-duration").innerHTML = "";
     document.getElementById("travel-info").innerHTML = "";
 
+    document.getElementById("title").classList.add("hidden");
+
     if (document.getElementById("cat-bus").classList.contains("active")) {
       //if the cat is already running = it's a second click => we stop the cat
 
       stopMoving(); //we stop the cat, we remove class "active"
       document.getElementById("cat-bus").classList.remove("active");
+      document.getElementById("title").classList.remove("hidden");
     } else {
       document.getElementById("cat-bus").classList.add("active");
       //for future use, if "active" -> the cat is running, if "no" -> the cat is not running
