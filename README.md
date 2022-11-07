@@ -1,5 +1,5 @@
 # 🐈‍ Date-Format-Exercise 🚌
-_Function that formats date and time. _
+_Function that formats date and time._
 
 Form-Date-Exercise is a Java-Script _'date formatting'_ assignment made on week 17 of learning with [ITGirlSchool].
 
