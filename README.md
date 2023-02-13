@@ -1,7 +1,7 @@
 # 🐈‍ Date-Format-Exercise 🚌
 _Function that formats date and time._
 
-Form-Date-Exercise is a Java-Script _'date formatting'_ assignment made on week 17 of learning with [ITGirlSchool].
+Form-Date-Exercise is a JavaScript _'date formatting'_ assignment made on week 17 of learning with [ITGirlSchool].
 
 We've got a task to write a  `formatDate(date)` function, that transforms `date` in the following way:
 
