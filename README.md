@@ -10,7 +10,7 @@ We've got a task to write a  `formatDate(date)` function, that transforms `date`
     - Upon less that 1 hour from `date`, show `n minutes ago`.
     - Otherwise, show full date in `DD.MM.YY HH:mm` format.
 
-That was quite a boring stuff to do, so I added a ⏲️-timer and cheered it up with some 🐈‍ + 🚌 animation. Enjoy!
+That was quite a boring thing to do, so I added a ⏲️-timer and cheered it up with some 🐈‍ + 🚌 animation. Enjoy!
 
 
 ## Result
