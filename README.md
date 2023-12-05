@@ -1,23 +1,23 @@
-# 🐈‍ Date-Format-Exercise 🚌
+# 🐈‍ Date Format Exercise 🚌
 _Function that formats date and time._
 
-Form-Date-Exercise is a JavaScript _'date formatting'_ assignment made on week 17 of learning with [ITGirlSchool].
+JavaScript _'date formatting'_ assignment that was completed in week 17 of learning with [ITGirlSchool].
 
-We've got a task to write a  `formatDate(date)` function, that transforms `date` in the following way:
+The task was to write a `formatDate(date)` function that transforms `date` in the following way:
 
-    - Upon less that 1 second from `date` show `right now`.     
-    - Upon less that 1 minute from `date`, show `n seconds ago`.
-    - Upon less that 1 hour from `date`, show `n minutes ago`.
-    - Otherwise, show full date in `DD.MM.YY HH:mm` format.
+    - If the time is less than 1 second from `date`, it should be displayed as `right now`.     
+    - If the time is less than 1 minute from `date`, it should be displayed as `n seconds ago`.
+    - If the time is less than 1 hour from `date`, it should be displayed as `n minutes ago`.
+    - If none of the above conditions are met, the full date and time should be displayed in the format "DD.MM.YY HH:mm".
 
-That was quite a boring thing to do, so I added a ⏲️-timer and cheered it up with some 🐈‍ + 🚌 animation. Enjoy!
+To make the task more enjoyable, a ⏲-timer and some 🐈‍ + 🚌 animation were added. Enjoy!
 
 
 ## Result
 <img width="45%" alt="screen capture" src="../main/assets/img/captureweb.jpeg">
 
 ## Demo
-[Date-Format-Exercise]
+[date-format-exercise]
 
 
 ## Tech stack
@@ -31,4 +31,4 @@ That was quite a boring thing to do, so I added a ⏲️-timer and cheered it up
   
 
    [ITGirlSchool]: <https://itgirlschool.com/en>
-   [Date-Format-Exercise]: <https://alenagm.github.io/Date-Format-Exercise/>
+   [date-format-exercise]: <https://alenagm.github.io/date-format-exercise/>
