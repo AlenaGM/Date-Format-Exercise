@@ -5,10 +5,10 @@ JavaScript _'date formatting'_ assignment that was completed in week 17 of learn
 
 The task was to write a `formatDate(date)` function that transforms `date` in the following way:
 
-    - If the time is less than 1 second from `date`, it should be displayed as `right now`.     
-    - If the time is less than 1 minute from `date`, it should be displayed as `n seconds ago`.
-    - If the time is less than 1 hour from `date`, it should be displayed as `n minutes ago`.
-    - If none of the above conditions are met, the full date and time should be displayed in the format "DD.MM.YY HH:mm".
+- If the time is less than 1 second from `date`, it should be displayed as `right now`.     
+- If the time is less than 1 minute from `date`, it should be displayed as `n seconds ago`.
+- If the time is less than 1 hour from `date`, it should be displayed as `n minutes ago`.
+- If none of the above conditions are met, the full date and time should be displayed in the format "DD.MM.YY HH:mm".
 
 To make the task more enjoyable, a ⏲-timer and some 🐈‍ + 🚌 animation were added. Enjoy!
 
