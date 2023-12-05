@@ -3,45 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Forum&display=swap&subset=cyrillic-ext"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="JavaScript function that formats date and time: training project for ITGirlSchool"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="shortcut icon" href="assets/img/fast-time.png" type="img/png" />
     <title>Date Formatter</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header"></header>
-      <main class="main">
-        <div class="container">
-          <h1 class="title" id="title">Off we go!! Click on the image</h1>
-          <img
-            id="cat-bus"
-            class="image"
-            src="assets/img/totoro-cat-bus.jpg"
-            alt="totoro cat-bus"
-          />
-          <div class="buttons">
-            <div id="clickDate" class="button button_color-lilac">
-              Travel time
-            </div>
-            <div id="arrDest" class="button button_color-lilac">Arrived!!</div>
-            <div id="resetTimer" class="button button_color-lilac">
-              Clear time
-            </div>
+    <main class="main">
+      <div class="wrapper">
+        <h1 class="title" id="title">Off we go!! Click on the image</h1>
+        <img
+          id="cat-bus"
+          class="image"
+          src="assets/img/totoro-cat-bus.webp"
+          alt="totoro cat-bus"
+        />
+        <div class="buttons">
+          <div id="clickDate" class="button button_color-lilac">
+            Travel time
           </div>
-          <div class="travel-info" id="travel-duration"></div>
-          <div class="travel-info" id="travel-info"></div>
+          <div id="arrDest" class="button button_color-lilac">Arrived!!</div>
+          <div id="resetTimer" class="button button_color-lilac">
+            Clear time
+          </div>
         </div>
-      </main>
-      <div class="footer"></div>
-    </div>
+        <div class="travel-info" id="travel-duration"></div>
+        <div class="travel-info" id="travel-info"></div>
+      </div>
+    </main>
 
     <script src="assets/js/script.js"></script>
   </body>
