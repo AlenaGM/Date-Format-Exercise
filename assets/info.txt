@@ -1,6 +1,0 @@
-font-family: 'Forum', cursive;
-
-#EEF3F8 background
-#425B5F title
-#748bb4 buttons
-#ccbac6

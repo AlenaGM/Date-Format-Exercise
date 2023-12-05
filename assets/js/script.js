@@ -14,7 +14,7 @@ document
     document.getElementById("title").classList.add("hidden");
 
     if (document.getElementById("cat-bus").classList.contains("active")) {
-      //if the cat is already running = it's a second click => we stop the cat
+      //if the cat is already running = it's a second click on button => we stop the cat
 
       stopMoving(); //we stop the cat, we remove class "active"
       document.getElementById("cat-bus").classList.remove("active");
